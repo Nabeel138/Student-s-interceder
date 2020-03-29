@@ -1,0 +1,25 @@
+<div class="main-wrapper">
+  <div class="container">
+    <div class="login-panel">
+      <h2 class="title">Existing Customers</h2>
+        <form>
+          <label>Email address</label>
+          <input [uiInput] name="email" [(ngModel)]="inputModel">
+          <label>Password</label>
+          <input type="password" [uiInput] name="password" [(ngModel)]="inputModel">
+        </form>
+        <div class="forgotten-password">
+          <a href="">Forgotten your password?</a>
+        </div>
+        <div class="login-box">
+          <button class="login">Sign In</button>
+        </div>
+    </div>
+    <div class="login-panel">
+      <h2 class="title">New to Student's Interceder ?</h2>
+      <div class="login-box">
+        <button class="login" routerLink="../sign-up">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+<div class="main-wrapper">
+  <div class="product-box">
+    <div class="product-preview">
+      <ui-photo-carousel [photos]="product.photos"></ui-photo-carousel>
+      <div>
+        <h4>Description</h4>
+        <p> School dress available in all sizes.</p>
+        <p>95% Polyester, 5% Elastane</p>
+        <p>Made in India</p>
+        <p>Model is 173cm/5'8" and wears a size UK 8.</p>
+      </div>
+      <div>
+        <h4>Product Details</h4>
+        <table cellspacing="0">
+          <tbody>
+          <tr>
+            <th>
+              Brand:
+            </th>
+            <td>
+              Bec &amp; Bridge
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Colour:
+            </th>
+            <td>
+              Red & Blue
+            </td>
+          </tr>
+          <tr>
+            <th>
+              Material:
+            </th>
+            <td>
+              95% Polyester, 5% Elastane
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="product-info">
+      <div class="title"><h3>{{ product.title }}</h3></div>
+      <div class="sub-title">{{ product.description }}</div>
+      <div class="price-box">
+        <div class="price">
+          {{ product.price }}$
+        </div>
+        <div class="rating">
+          <ui-rating [value]="3"></ui-rating>
+        </div>
+      </div>
+      <div class="color-box">
+        <p>Select color</p>
+        <button [uiButton] [type]="'color'" [kitCheck] [(ngModel)]="color" [value]="'1'"
+                [style.background]="'#ccc'"></button>
+        <button [uiButton] [type]="'color'" [kitCheck] [(ngModel)]="color" [value]="'2'"
+                [style.background]="'#000C48'"></button>
+        <button [uiButton] [type]="'color'" [kitCheck] [(ngModel)]="color" [value]="'3'"
+                [style.background]="'#883C73'"></button>
+      </div>
+      <div class="size-box">
+        <p>Select size</p>
+        <button [uiButton] [type]="'size'" [kitCheck] [(ngModel)]="size" [value]="'xs'">XS</button>
+        <button [uiButton] [type]="'size'" [kitCheck] [(ngModel)]="size" [value]="'s'">S</button>
+        <button [uiButton] [type]="'size'" [kitCheck] [(ngModel)]="size" [value]="'m'">M</button>
+        <button [uiButton] [type]="'size'" [kitCheck] [(ngModel)]="size" [value]="'l'">L</button>
+        <button [uiButton] [type]="'size'" [kitCheck] [(ngModel)]="size" [value]="'xl'">XL</button>
+      </div>
+      <div class="quantity">
+        <ui-qt-input [ngModel]="4"></ui-qt-input>
+      </div>
+      <button class="add" (click)="addtocart();" [uiButton] [icon]="'cart'">Add to cart</button>
+      <div>
+        <h4>Delivery Information</h4>
+        <p>Estimated delivery within 3 days.</p>
+      </div>
+      <div>
+        <h4>Returns Policy</h4>
+        <p>We are confident that you will be happy with your purchase. However, if you are not satisfied you can return
+          your item for a full refund.</p>
+      </div>
+    </div>
+  </div>
+  <div class="recently-viewed">
+    <h4>Recently viewed:</h4>
+    <div class="list-cards">
+      <app-card *ngFor="let product of recent" [product]="product"></app-card>
+    </div>
+  </div>
+</div>

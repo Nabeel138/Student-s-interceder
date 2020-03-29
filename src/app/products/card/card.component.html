@@ -1,0 +1,17 @@
+<a [routerLink]="['/products/', product.id]">
+<div class="product-photo">
+  <img [src]="product.picture">
+</div>
+<div class="product-info">
+  <div>
+    <div class="title">
+      <h3>{{ product.title }}</h3>
+    </div>
+    <div class="sub-title">{{ product.description }}</div>
+  </div>
+  <div class="price-box">
+    <p class="old-price">{{ product.price }} Rs. </p>
+    <p class="new-price">{{ product.sale }} Rs. </p>
+  </div>
+</div>
+</a>

@@ -1,0 +1,44 @@
+@import "params";
+@import "common";
+
+:host {
+  background-color: #333434;
+  color: $whiteSmokeColor;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: $grid*3 0;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: $grid*2;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style: none;
+  li {
+    font-size: 1rem;
+    margin: $grid 0;
+    a{
+      color: $whiteSmokeColor;
+      text-decoration: none;
+      &:hover{
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}

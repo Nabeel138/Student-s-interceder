@@ -1,0 +1,51 @@
+:host {
+  display: flex;
+  flex-direction: row;
+}
+
+.thumbs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100px;
+  height: 100px;
+  a {
+    text-align: center;
+    margin-right: 10px;
+    img {
+      height: 100px;
+    }
+    &.-active {
+      box-shadow: 0 0 10px 5px rgba(245, 243, 243, 1);
+      border-radius: 6px;
+    }
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+}
+
+@media (max-width: 900px) {
+  :host {
+    flex-direction: column;
+  }
+  .thumbs {
+    flex-direction: row;
+    order: 2;
+  }
+}
+
+@media (max-width: 800px) {
+  .thumbs {
+    height: 60px;
+    width: 60px;
+    a{
+      img {
+        height: 60px;
+      }
+    }
+  }
+}

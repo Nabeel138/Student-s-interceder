@@ -1,0 +1,35 @@
+<div class="main-wrapper">
+  <div class="login-panel">
+    <h2 class="title">About You</h2>
+    <form>
+      <div>
+        <label>Full Name:</label>
+        <input [uiInput] name="full-name" [(ngModel)]="inputModel">
+      </div>
+      <div>
+        <label>Email address</label>
+        <input [uiInput] name="email" [(ngModel)]="inputModel1">
+      </div>
+      <div>
+        <label>Confirm Email:</label>
+        <input [uiInput] name="confirm-email" [(ngModel)]="inputModel2">
+      </div>
+      <div>
+        <label>Password:</label>
+        <input type="password" [uiInput] name="password" [(ngModel)]="inputModel4">
+      </div>
+      <div>
+        <label>Confirm Password:</label>
+        <input type="password" [uiInput] name="confirm-password" [(ngModel)]="inputModel5">
+      </div>
+    </form>
+    <div class="login-box">
+      <button class="login">Continue</button>
+    </div>
+    <div class="policy">
+      <p>
+        By proceeding, you are confirming that you agree to our Terms and Conditions and Privacy Policy.
+      </p>
+    </div>
+  </div>
+</div>

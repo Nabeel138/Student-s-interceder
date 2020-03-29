@@ -1,0 +1,113 @@
+@import "params";
+
+:host {
+  &input:not([type="checkbox"]):not([type="radio"]) {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 2px;
+    transition: all .3s;
+    padding: 8px;
+    box-shadow: 0 0 2px 0 rgba(50, 50, 50, 0.1);
+    background: transparent;
+    border: 1px solid $mercuryColor;
+    color: #4a505a;
+    &:hover {
+      outline: none;
+      border-color: $primaryColor2;
+    }
+    &:focus {
+      outline: none;
+      border-color: $primaryColor2;
+      box-shadow: 0 0 6px 0 rgba(109, 237, 246, 0.7);
+    }
+  }
+
+  &input[type="checkbox"] {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    &:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      cursor: pointer;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      border-radius: 2px;
+      transition: all .3s;
+      background: #ffffff;
+      border: 1px solid $mercuryColor;
+    }
+    &:after {
+      transform: rotate(45deg) scale(1);
+      position: absolute;
+      left: 4px;
+      top: 1px;
+      display: table;
+      width: 5px;
+      height: 8px;
+      border-top-width: 0px;
+      border-right-width: 2px;
+      border-bottom-width: 2px;
+      border-left-width: 0px;
+      border-color: #ffffff;
+      border-style: solid;
+      content: " ";
+      transition: all .3s;
+    }
+    &:hover:before {
+      border-color: $primaryColor2;
+    }
+    &:focus:before {
+      border-color: $mercuryColor;
+    }
+    &:checked:after {
+      border-color: $primaryColor;
+    }
+  }
+
+  &input[type="radio"] {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    &:before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      cursor: pointer;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      border-radius: 50%;
+      transition: all .3s;
+      background: #ffffff;
+      border: 1px solid $mercuryColor;
+    }
+    &:after {
+      position: absolute;
+      left: 4px;
+      top: 4px;
+      display: table;
+      width: 6px;
+      height: 6px;
+      background: #ffffff;
+      border: 0;
+      border-radius: 50%;
+      content: " ";
+      transition: all .3s;
+    }
+    &:hover:before {
+      border-color: $primaryColor2;
+    }
+    &:focus:before {
+      border-color: $mercuryColor;
+    }
+    &:checked:after {
+      background: $primaryColor;
+    }
+  }
+}

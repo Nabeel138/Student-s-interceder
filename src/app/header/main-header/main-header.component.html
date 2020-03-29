@@ -1,0 +1,24 @@
+<div class="top-bar">
+  <div class="main-wrapper">
+    <div class="search">
+      <input type="text" placeholder="Search for a brand or product…" [(ngModel)]="inputModel">
+      <button>
+        <kit-icon [name]="'search'" size="20px"></kit-icon>
+      </button>
+    </div>
+    <div class="account">
+      <a routerLink="/auth/sign-in">
+        <kit-icon [name]="'avatar'" size="25px"></kit-icon>
+      </a>
+      <a routerLink="/bag">
+        <kit-icon [name]="'shopping-cart'" size="25px"></kit-icon>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="head">
+  <div class="logo" routerLink="/">Student's Interceder</div>
+</div>
+<div class="navigation">
+  <app-main-menu></app-main-menu>
+</div>

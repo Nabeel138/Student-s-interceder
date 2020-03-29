@@ -1,0 +1,71 @@
+@import "params";
+
+:host {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  padding: $grid*2;
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    box-shadow: 0 0 15px rgba(88, 104, 215, 0.4);
+  }
+}
+
+.product-photo {
+  align-items: center;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  display: flex;
+  height: 300px;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: $grid*2;
+  width: 100%;
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+.product-info {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  .title {
+    h3 {
+      font-size: 1.2rem;
+    }
+    a {
+      color: $textColor;
+      text-decoration: none;
+    }
+  }
+  .sub-title {
+    font-size: 1rem;
+  }
+  .price-box {
+    align-items: baseline;
+    color: $charcoalColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: $grid*2 0;
+    p {
+      margin: 0;
+    }
+    .old-price {
+      color: $stormGreyColor;
+      margin-right: $grid;
+      text-decoration: line-through;
+    }
+    .new-price {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+  }
+}

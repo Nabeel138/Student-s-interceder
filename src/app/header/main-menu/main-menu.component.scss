@@ -1,0 +1,70 @@
+@import "params";
+@import "common";
+
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sub {
+  background: $whiteSmokeColor;
+  border-bottom: 2px solid $mercuryColor;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  .section {
+    padding: $grid * 2 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    > div {
+      padding-right: 20px;
+    }
+    .title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: $grid;
+    }
+    ul {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      li {
+        font-size: 1rem;
+        padding: 5px 0;
+        a {
+          color: initial;
+          text-decoration: none;
+          &:hover {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  li {
+    cursor: pointer;
+    padding: $grid*2.5 $grid * 2;
+    text-align: center;
+    &:hover {
+      background: $whiteSmokeColor;
+      color: $primaryColor;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  ul {
+    flex-wrap: wrap;
+  }
+}
