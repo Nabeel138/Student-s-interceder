@@ -1,63 +1,28 @@
-# Alma by [ngx-kit](https://ngx-kit.com)
+# Student Interceder
 
-Demonstration of Angular eCommerce project based on [ngx-kit](https://ngx-kit.com).
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6
 
-[**Watch the demo!**](https://alma.ngx-kit.com)
+## Development server
 
-[![alma screenshot](./screenshot.png)](https://alma.ngx-kit.com)
+`npm install`
 
-Now in active development, some features are incomplete or stubbed.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Backend : Google Drive
 
-## Features
+### Screenshots :
 
-* Angular 5
-* Lazy-loading
-* AOT
-* PWA
-* Server-side rendering
-* Docker build
+Screenshot of Homepage :
+
+![](screenshots/screenshot1.png)
 
 
-## Modules
+Screenshot of Banner :
 
-* Home
-* Products
-* Auth
-* Bag
-* Checkout
+![](screenshots/screenshot2.png)
 
 
-## Usage
+Screenshot of Cart :
 
-Installation:
+![](screenshots/screenshot3.png)
 
-* Clone
-* `npm i`
-
-Dev:
-
-* `npm start`
-* open `localhost:4200`
-
-Default browser build:
-
-* `npm run build:browser`
-
-SSR Build:
-
-* `npm run build:server`
-* `serve:server`
-* open `localhost:4000`
-
-Docker:
-
-* Update docker image name in `package.json` (replace `dhub.nvx.me:443/ngx-kit-ui-alma` with your url)
-* `npm run docker:build`
-* `npm run docker:run`
-* open `localhost:4001`
-
-Docker deploy:
-
-* `npm run deploy`
-* App will be exposed on port 4000.
